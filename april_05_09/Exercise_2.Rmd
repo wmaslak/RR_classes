@@ -1,5 +1,5 @@
 ---
-title: "Excercise 2"
+title: "Exercise 2"
 author: "Wojciech Hardy; Michał Paliński"
 date: "3/21/2021"
 output: html_document
