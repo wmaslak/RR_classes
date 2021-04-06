@@ -1,2 +1,3 @@
-# RR_classes
-Reproducible Research repo template
+# Reproducible Research repo template
+
+This is the starting point for individual RR course repos.
