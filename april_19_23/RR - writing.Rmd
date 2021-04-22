@@ -374,6 +374,8 @@ Legal stuff might be important and crucial for who ends up using your code. Thin
 - FAQ.
 - where to ask for support.
 
+Also of interest: [_"Readme-driven development"_](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html).
+
 <div class="notes">
 Depending on your needs, you might want to pay special attention to how you start if you want your code to get out there and be used. 
 
