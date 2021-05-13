@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(meta)
 library(metafor)
 library(dplyr)
-# devtools::install_github("MathiasHarrer/dmetar")
+
 setwd("C:\\Users\\whard\\OneDrive\\Desktop\\Reproducible research\\RR_classes\\RR_classes\\may_1014")
 ```
 
