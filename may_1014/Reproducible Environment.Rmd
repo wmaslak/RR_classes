@@ -8,7 +8,6 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(renv)
-library(meta)
 ```
 
 ## Reproducible Environment
@@ -61,7 +60,7 @@ View(old.packages())
 ```
 
 ```{r}
-install.packages("highr")
+# install.packages("highr")
 ```
 Take a look at the contents of `renv.lock`. Let's update this.
 
@@ -72,19 +71,27 @@ Great! But what if our code broke after the update?
 
 ## Reverting environments
 
-The `renv` package has a version control system that stores previous commits.
+The `renv` package can take a look at the Git version control system that stores previous commits. We can use it to revert to a prior version of `renv.lock`.
 
 ```{r}
 renv::history()
 ```
 
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+renv::revert(commit = "3727e178996ba868f4d0230b3ab3601d6e004731	")
 ```
+Let's see what happened:
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+```{r}
+renv::status()
+```
+We have a new version of the package but the lockfile uses an older one. Let's restore it.
+
+```{r}
+renv::restore()
+```
+One last remark: there are other functions in the package. 
+
+E.g. there is another package for storing environments (`packrat`) and `renv::migrate()` allows changing from `packrat` to `renv`.
+
+
